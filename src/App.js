@@ -1,10 +1,12 @@
 /** @format */
 
-import "./App.css";
+
+import {StockPhone}  from "./compontents/StockPhone";
 
 function App() {
   return (
     <div className='App'>
+    <StockPhone/>
     </div>
   );
 }
