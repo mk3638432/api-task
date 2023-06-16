@@ -7,28 +7,28 @@ const App = () => {
 
 
   const getData = async () => {
-    let result = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    setFetchData(result.data)
+    let result = await axios.get('https://dummyjson.com/products')
+    setFetchData(result.data.products)
   }
-console.log(fetchdata)
+console.log(fetchdata.products)
 
 
   useEffect(() => {
    getData()    
   } , [])
 
-  
+
   return (
     <div>
-      <div>
+      <div className='grid'>
         {
           fetchdata.map((res) => {
-            const {id , title , body} = res;
+            const {id , title , images} = res;
             return(
-              <div className='map_element' key={id}>
-               <h3>{id} </h3>
+              <div className='card' key={id}>
+               <h3 style={{alignItems: "center"}}>{id} </h3>
                <h5>{title} </h5>
-               <h6 className='body'> {body} </h6>
+               <img src={images[0]}  alt='/' className='image'/>
                </div> 
             )
           })
