@@ -4,7 +4,7 @@ import axios from "axios";
 // import axios from "./axios"
 import "./AxioApi.css";
 
-const API = "https://jsonplaceholder.typicode.com";
+// const API = "https://jsonplaceholder.typicode.com";
 
 const AxioApi = () => {
   const [myData, setMyData] = useState([]);
@@ -29,9 +29,9 @@ const AxioApi = () => {
 
   const getApiData = async (url) => {
     try {
-      // const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
-      const res = await axios.get(url);
+    //   const res = await axios.get(url);
 
       //   const res = await axios.get("/posts");
       setMyData(res.data);
@@ -42,29 +42,31 @@ const AxioApi = () => {
 
   //   calling the function
   useEffect(() => {
-    getApiData(`${API}/posts`);
-    // getApiData()
+    // getApiData(`${API}/posts`);
+    getApiData()
   }, []);
 
   return (
     <>
       <div
-        style={{ textAlign: "center", marginTop: "20px", fontWeight: "800" }}>
-        AxioApi
+        style={{ textAlign: "center", marginTop: "20px"}}>
+       <strong> AxioApi </strong>
       </div>
-      {/* loop store in data */}
+       {/* loop store in data  */}
       {isError !== "" && <h2> {isError} </h2>}
-
-      <div className='grid'>
-        {myData.slice(0, 12).map((post) => {
-          const { id, title, body } = post;
-          return (
-            <div className='card' key={id}>
-              <h2>{title.slice(0, 15).toUpperCase()}</h2>
-              <p>{body.slice(0, 100)}</p>
-            </div>
-          );
-        })}
+      <div className='card-center'>
+        <div className='grid'>
+          {myData.slice(0, 12).map((post) => {
+            const { id, title, body } = post;
+            return (
+              <div className='card' key={id}>
+                <h2>{title.slice(0, 15).toUpperCase()}</h2>
+                <p>{body.slice(0, 100)}</p>
+                <button>Add to Card</button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );

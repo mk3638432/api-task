@@ -5,7 +5,7 @@ import AxioApi from "./compontents/AxioApi"
 function App() {
   return (
     <div className='App'>
-      <StockPhone />
+      {/* <StockPhone /> */}
       <AxioApi/>
     </div>
   );

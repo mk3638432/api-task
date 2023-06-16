@@ -4,16 +4,36 @@
     padding:2rem;
     border: 3px solid gray;
     font-size: 15px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .grid{
-    max-width: 120rem;
+    max-width: 60rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:1.6rem;
+    gap:2rem;
+}
+
+.card-center{
+    display: grid;
+    place-items:  center;
+    margin-top: 20px;
+    
 }
 
 body{
     background-color:rgb(173, 136, 136);
 }
 
+.card,button{
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+}
+ button{
+    background-color: blue;
+    color: white;
+ }
