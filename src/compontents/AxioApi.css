@@ -1,0 +1,19 @@
+
+
+.card{
+    padding:2rem;
+    border: 3px solid gray;
+    font-size: 15px;
+}
+
+.grid{
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1.6rem;
+}
+
+body{
+    background-color:rgb(173, 136, 136);
+}
+

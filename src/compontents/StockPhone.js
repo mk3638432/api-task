@@ -24,7 +24,7 @@ export const StockPhone = () => {
               <strong> {data.id} . </strong>
             </div>
             <div>{data.phone}</div>
-            <div>
+            <div> 
               <img
                 src={data.image}
                 style={{ height: "50px", width: "50px", marginRight: "200px" }}
