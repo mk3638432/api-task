@@ -1,12 +1,11 @@
 /** @format */
 
-
-import {StockPhone}  from "./compontents/StockPhone";
+import { StockPhone } from "./compontents/StockPhone";
 
 function App() {
   return (
     <div className='App'>
-    <StockPhone/>
+      <StockPhone />
     </div>
   );
 }
